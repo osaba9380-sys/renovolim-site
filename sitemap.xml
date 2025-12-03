@@ -8,23 +8,24 @@
   </url>
 
   <url>
-    <loc>https://renovolim.com/services</loc>
+    <loc>https://renovolim.com/hebrew</loc>
     <lastmod>2025-01-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
   </url>
 
   <url>
-    <loc>https://renovolim.com/contact</loc>
-    <lastmod>2025-01-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
-    <loc>https://renovolim.com/about</loc>
+    <loc>https://renovolim.com/thanks</loc>
     <lastmod>2025-01-03</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.50</priority>
+    <priority>0.40</priority>
+  </url>
+
+  <url>
+    <loc>https://renovolim.com/thanks_he</loc>
+    <lastmod>2025-01-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.40</priority>
   </url>
 </urlset>
+
