@@ -916,3 +916,28 @@ html[dir="rtl"] .form-group textarea {
     text-align: right;
     direction: rtl;
 }
+
+/* =========================================
+   CORRECTION SPECIFIQUE : IMAGE TOILETTE
+   ========================================= */
+
+/* =========================================
+   CORRECTION FINALE : POSITION IMAGE TOILETTE
+   ========================================= */
+
+/* On cible l'image spécifique */
+.project-after-img.img-dezoom {
+    /* 1. On remet les valeurs pour qu'elle remplisse tout le cadre (pas de bordures blanches) */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Important : ça remplit le cadre en coupant ce qui dépasse */
+    /* 2. LA LIGNE MAGIQUE : On change le point de focus */
+    /* Par défaut c'est "center center". On change pour "center bottom". */
+    /* Cela force l'image à s'aligner sur le bas du cadre, montrant ainsi le toilette. */
+    object-position: center bottom;
+    /* 3. On nettoie les anciennes règles de positionnement si elles traînent */
+    top: 0;
+    left: 0;
+    transform: none;
+    background-color: transparent;
+}
