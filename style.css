@@ -942,16 +942,5 @@ html[dir="rtl"] .form-group textarea {
     background-color: transparent;
 
 }
-#home h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
 
-#home p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 12px;
-    color: #555;
-    max-width: 800px;
-}
+
