@@ -23,7 +23,7 @@
 /* --- CORRECTION BUG REBOND / SCROLL MOBILE --- */
 html {
     width: 100%;
-    /* On enlève overflow sur html pour éviter le blocage */
+    /* On enlÃ¨ve overflow sur html pour Ã©viter le blocage */
 }
 
 body {
@@ -149,10 +149,10 @@ nav {
 
 /* --- STYLE DU LOGO MAISON --- */
 .header-logo {
-    height: 120px; /* On garde la même taille */
+    height: 120px; /* On garde la mÃªme taille */
     width: auto;
     /* 1. RAPPROCHER DU TITRE */
-    /* J'ai réduit la marge de 20px à 8px pour qu'il soit plus près */
+    /* J'ai rÃ©duit la marge de 20px Ã  8px pour qu'il soit plus prÃ¨s */
     margin-right: 3px;
     /* 2. DESCENDRE LE LOGO */
     /* J'ajoute 10px de marge en haut pour le pousser vers le bas */
@@ -160,10 +160,10 @@ nav {
     display: block;
 }
 
-/* Ajustement pour la version Hébreu */
+/* Ajustement pour la version HÃ©breu */
 html[dir="rtl"] .header-logo {
     margin-right: 0;
-    /* On applique les mêmes changements pour l'hébreu */
+    /* On applique les mÃªmes changements pour l'hÃ©breu */
     margin-left: 8px;
     margin-top: 10px;
 }
@@ -579,7 +579,7 @@ section {
 
 .info-item {
     display: grid;
-    grid-template-columns: 40px 1fr; /* Colonne icône fixe + reste pour texte */
+    grid-template-columns: 40px 1fr; /* Colonne icÃ´ne fixe + reste pour texte */
     align-items: start;
     gap: 10px;
     margin-bottom: 1.5rem;
@@ -631,7 +631,7 @@ section {
         background: #f9f9f9;
     }
 
-/* --- BOUTON ENVOYER (BLEU & ANIMÉ) --- */
+/* --- BOUTON ENVOYER (BLEU & ANIMÃ‰) --- */
 form button[type="submit"] {
     display: block;
     width: 100%;
@@ -698,7 +698,7 @@ form button[type="submit"] {
 }
 
 @media screen and (max-width: 768px) {
-    /* J'ai supprimé ici le html, body qui causait le conflit */
+    /* J'ai supprimÃ© ici le html, body qui causait le conflit */
 
     /* --- CENTRAGE DU BLOC LOGO + TITRE --- */
     .logo-wrapper {
@@ -713,15 +713,15 @@ form button[type="submit"] {
 
     /* --- LOGO PLUS PETIT SUR MOBILE --- */
     .header-logo {
-        height: 80px; /* Taille réduite pour le mobile (essaie 35px ou 40px) */
-        margin-top: 0; /* On enlève le décalage du PC pour que ça reste aligné */
+        height: 80px; /* Taille rÃ©duite pour le mobile (essaie 35px ou 40px) */
+        margin-top: 0; /* On enlÃ¨ve le dÃ©calage du PC pour que Ã§a reste alignÃ© */
         margin-right: -10px; /* Petit espace entre logo et texte */
         /* Ajustement vertical */
         margin-top: 5px;
         display: block;
     }
 
-    /* Ajustement spécial pour l'Hébreu sur Mobile */
+    /* Ajustement spÃ©cial pour l'HÃ©breu sur Mobile */
     html[dir="rtl"] .header-logo {
         margin-right: 0;
         margin-left: -10px;
@@ -909,8 +909,8 @@ html[dir="rtl"] .info-link {
     width: 100%;
 }
 
-/* --- FIX FORMULAIRE HEBREU (AJOUTÉ) --- */
-/* Le texte à l'intérieur s'écrit de droite à gauche */
+/* --- FIX FORMULAIRE HEBREU (AJOUTÃ‰) --- */
+/* Le texte Ã  l'intÃ©rieur s'Ã©crit de droite Ã  gauche */
 html[dir="rtl"] .form-group input,
 html[dir="rtl"] .form-group textarea {
     text-align: right;
@@ -925,19 +925,33 @@ html[dir="rtl"] .form-group textarea {
    CORRECTION FINALE : POSITION IMAGE TOILETTE
    ========================================= */
 
-/* On cible l'image spécifique */
+/* On cible l'image spÃ©cifique */
 .project-after-img.img-dezoom {
     /* 1. On remet les valeurs pour qu'elle remplisse tout le cadre (pas de bordures blanches) */
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Important : ça remplit le cadre en coupant ce qui dépasse */
+    object-fit: cover; /* Important : Ã§a remplit le cadre en coupant ce qui dÃ©passe */
     /* 2. LA LIGNE MAGIQUE : On change le point de focus */
-    /* Par défaut c'est "center center". On change pour "center bottom". */
-    /* Cela force l'image à s'aligner sur le bas du cadre, montrant ainsi le toilette. */
+    /* Par dÃ©faut c'est "center center". On change pour "center bottom". */
+    /* Cela force l'image Ã  s'aligner sur le bas du cadre, montrant ainsi le toilette. */
     object-position: center bottom;
-    /* 3. On nettoie les anciennes règles de positionnement si elles traînent */
+    /* 3. On nettoie les anciennes rÃ¨gles de positionnement si elles traÃ®nent */
     top: 0;
     left: 0;
     transform: none;
     background-color: transparent;
+
+}
+#home h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+#home p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    color: #555;
+    max-width: 800px;
 }
