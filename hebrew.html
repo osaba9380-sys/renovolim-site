@@ -4,12 +4,16 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>רנוב'עולים – שיפוצים בישראל</title>
+    <link rel="icon" type="image/png" href="images/maisondetourer.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
 </head>
 <body>
     <header>
-        <div class="logo-wrapper"><span class="logo">רנוב'עולים</span></div>
+        <div class="logo-wrapper">
+            <img src="images/maisondetourer.png" alt="Logo" class="header-logo">
+            <span class="logo">רנוב'עולים</span>
+        </div>
         <div class="hamburger-menu" onclick="toggleMenu()"><span></span><span></span><span></span></div>
         <nav id="nav-menu">
             <a href="#home" onclick="toggleMenu()">בית</a>
@@ -97,7 +101,7 @@
                     <img class="project-before-img" alt="לפני" src="images/chantier interieur.jpg" />
                     <div class="label-badge label-before">לפני</div>
                     <div class="label-badge label-after">אחרי</div>
-                    <div class="slider-handle"><div class="slider-button">↔</div></div>
+                    <div class="slider-handle"><div class="slider-button"></div></div>
                     <input class="project-slider" type="range" min="0" max="100" value="50" oninput="updateSlider(this)" />
                 </div>
                 <div class="project-info"><div class="project-title">סלון מואר</div><div class="project-city">תל-אביב</div></div>
@@ -109,7 +113,7 @@
                     <img class="project-before-img" alt="לפני" src="images/lavabo ancien.jpeg" />
                     <div class="label-badge label-before">לפני</div>
                     <div class="label-badge label-after">אחרי</div>
-                    <div class="slider-handle"><div class="slider-button">↔</div></div>
+                    <div class="slider-handle"><div class="slider-button"></div></div>
                     <input class="project-slider" type="range" min="0" max="100" value="50" oninput="updateSlider(this)" />
                 </div>
                 <div class="project-info"><div class="project-title">חדר רחצה</div><div class="project-city">נתניה</div></div>
@@ -121,7 +125,7 @@
                     <img class="project-before-img" alt="לפני" src="images/chantier.jpeg" />
                     <div class="label-badge label-before">לפני</div>
                     <div class="label-badge label-after">אחרי</div>
-                    <div class="slider-handle"><div class="slider-button">↔</div></div>
+                    <div class="slider-handle"><div class="slider-button"></div></div>
                     <input class="project-slider" type="range" min="0" max="100" value="50" oninput="updateSlider(this)" />
                 </div>
                 <div class="project-info"><div class="project-title">שירותים</div><div class="project-city">רמת גן</div></div>

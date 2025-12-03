@@ -20,17 +20,25 @@
     box-sizing: border-box;
 }
 
-html, body {
+/* --- CORRECTION BUG REBOND / SCROLL MOBILE --- */
+html {
     width: 100%;
-    overflow-x: hidden;
-    position: relative;
+    /* On enlève overflow sur html pour éviter le blocage */
 }
 
 body {
+    width: 100%;
     font-family: 'Poppins', sans-serif;
     background: var(--background-color);
     color: #333;
     line-height: 1.6;
+    /* Gestion propre du scroll */
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    /* STOPPE L'EFFET ELASTIQUE (REBOND) */
+    overscroll-behavior-y: none;
+    -webkit-overflow-scrolling: touch;
 }
 
 a {
@@ -137,6 +145,27 @@ nav {
 
 .desktop-only {
     display: flex;
+}
+
+/* --- STYLE DU LOGO MAISON --- */
+.header-logo {
+    height: 120px; /* On garde la même taille */
+    width: auto;
+    /* 1. RAPPROCHER DU TITRE */
+    /* J'ai réduit la marge de 20px à 8px pour qu'il soit plus près */
+    margin-right: 3px;
+    /* 2. DESCENDRE LE LOGO */
+    /* J'ajoute 10px de marge en haut pour le pousser vers le bas */
+    margin-top: 15px;
+    display: block;
+}
+
+/* Ajustement pour la version Hébreu */
+html[dir="rtl"] .header-logo {
+    margin-right: 0;
+    /* On applique les mêmes changements pour l'hébreu */
+    margin-left: 8px;
+    margin-top: 10px;
 }
 
 /* =========================================
@@ -669,14 +698,33 @@ form button[type="submit"] {
 }
 
 @media screen and (max-width: 768px) {
-    html, body {
-        overflow-x: hidden !important;
-    }
+    /* J'ai supprimé ici le html, body qui causait le conflit */
 
+    /* --- CENTRAGE DU BLOC LOGO + TITRE --- */
     .logo-wrapper {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
+        display: flex;
+        align-items: center; /* Centre verticalement */
+        justify-content: center;
+        width: max-content;
+    }
+
+    /* --- LOGO PLUS PETIT SUR MOBILE --- */
+    .header-logo {
+        height: 80px; /* Taille réduite pour le mobile (essaie 35px ou 40px) */
+        margin-top: 0; /* On enlève le décalage du PC pour que ça reste aligné */
+        margin-right: -10px; /* Petit espace entre logo et texte */
+        /* Ajustement vertical */
+        margin-top: 5px;
+        display: block;
+    }
+
+    /* Ajustement spécial pour l'Hébreu sur Mobile */
+    html[dir="rtl"] .header-logo {
+        margin-right: 0;
+        margin-left: -10px;
     }
 
     .hamburger-menu {
@@ -715,12 +763,14 @@ form button[type="submit"] {
         opacity: 0;
         overflow: hidden;
         transition: max-height 0.4s, opacity 0.4s;
+        margin-left: 0;
     }
 
         nav.open {
             max-height: 600px;
             opacity: 1;
             border-top: 1px solid #eee;
+            display: flex;
         }
 
         nav a {
@@ -846,16 +896,23 @@ html[dir="rtl"] .hamburger-menu.toggle span:nth-child(3) {
 
 /* --- CORRECTION ALIGNEMENT DES NUMEROS HEBREU --- */
 html[dir="rtl"] .info-item {
-    /* La Grid s'inverse auto : Colonne 1 devient Droite (Icone), Colonne 2 Gauche (Texte). C'est parfait. */
     text-align: right;
 }
 
 html[dir="rtl"] .info-text {
-    align-items: flex-start; /* Aligne le contenu à Droite dans le contexte RTL */
+    align-items: flex-start;
 }
 
 html[dir="rtl"] .info-link {
-    text-align: right; /* Force le numéro à s'aligner à droite sous le titre */
+    text-align: right;
     display: block;
     width: 100%;
+}
+
+/* --- FIX FORMULAIRE HEBREU (AJOUTÉ) --- */
+/* Le texte à l'intérieur s'écrit de droite à gauche */
+html[dir="rtl"] .form-group input,
+html[dir="rtl"] .form-group textarea {
+    text-align: right;
+    direction: rtl;
 }

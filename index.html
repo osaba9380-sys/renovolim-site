@@ -4,12 +4,17 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Rénov'Olim – Rénovation en Israël</title>
+    <link rel="icon" type="image/png" href="images/maisondetourer.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
 </head>
 <body>
     <header>
-        <div class="logo-wrapper"><span class="logo">Rénov'Olim</span></div>
+        <div class="logo-wrapper">
+            <img src="images/maisondetourer.png" alt="Logo" class="header-logo">
+            <span class="logo">Rénov'Olim</span>
+        </div>
+       
         <div class="hamburger-menu" onclick="toggleMenu()"><span></span><span></span><span></span></div>
         <nav id="nav-menu">
             <a href="#home" onclick="toggleMenu()">Accueil</a>
@@ -97,7 +102,7 @@
                     <img class="project-before-img" alt="Avant" src="images/chantier interieur.jpg" />
                     <div class="label-badge label-before">Avant</div>
                     <div class="label-badge label-after">Après</div>
-                    <div class="slider-handle"><div class="slider-button">↔</div></div>
+                    <div class="slider-handle"><div class="slider-button"></div></div>
                     <input class="project-slider" type="range" min="0" max="100" value="50" oninput="updateSlider(this)" />
                 </div>
                 <div class="project-info"><div class="project-title">Salon lumineux</div><div class="project-city">Tel-Aviv</div></div>
@@ -108,7 +113,7 @@
                     <img class="project-before-img" alt="Avant" src="images/lavabo ancien.jpeg" />
                     <div class="label-badge label-before">Avant</div>
                     <div class="label-badge label-after">Après</div>
-                    <div class="slider-handle"><div class="slider-button">↔</div></div>
+                    <div class="slider-handle"><div class="slider-button"></div></div>
                     <input class="project-slider" type="range" min="0" max="100" value="50" oninput="updateSlider(this)" />
                 </div>
                 <div class="project-info"><div class="project-title">Salle d'eau</div><div class="project-city">Netanya</div></div>
@@ -119,7 +124,7 @@
                     <img class="project-before-img" alt="Avant" src="images/chantier.jpeg" />
                     <div class="label-badge label-before">Avant</div>
                     <div class="label-badge label-after">Après</div>
-                    <div class="slider-handle"><div class="slider-button">↔</div></div>
+                    <div class="slider-handle"><div class="slider-button"></div></div>
                     <input class="project-slider" type="range" min="0" max="100" value="50" oninput="updateSlider(this)" />
                 </div>
                 <div class="project-info"><div class="project-title">Toilettes</div><div class="project-city">Ramat Gan</div></div>
