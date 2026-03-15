@@ -4,96 +4,206 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>רנוב'עולים – שיפוצים בישראל</title>
-    <link rel="icon" type="image/png" href="maisondetourer.png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <meta name="description" content="רנוב'עולים, מומחים בשיפוצים בישראל. אורן שאול, קבלן עם 30 שנות ניסיון, מלווה אתכם בצרפתית ועברית." />
+    <link rel="icon" type="image/png" href="maisondetourer.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link href="style.css" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        <div class="logo-wrapper">
-            <img src="maisondetourer.png" alt="Logo" class="header-logo">
-            <span class="logo">רנוב'עולים</span>
+    <!-- Scroll Progress -->
+    <div id="scroll-progress"></div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="header-inner">
+            <div class="logo-wrapper">
+                <img src="maisondetourer.png" alt="לוגו רנוב'עולים" class="header-logo" />
+                <span class="logo">רנוב'<span class="logo-accent">עולים</span></span>
+            </div>
+            <nav id="nav-menu">
+                <a href="#home" onclick="closeMenu()">בית</a>
+                <a href="#about" onclick="closeMenu()">אודות</a>
+                <a href="#services" onclick="closeMenu()">שירותים</a>
+                <a href="#projects" onclick="closeMenu()">פרויקטים</a>
+                <a href="#testimonials" onclick="closeMenu()">המלצות</a>
+                <a href="#contact" onclick="closeMenu()">צור קשר</a>
+                <div class="mobile-lang">
+                    <a class="lang-flag" href="index.html" title="Français"><img alt="FR" src="images/fr_flag.png" /></a>
+                </div>
+            </nav>
+            <div class="header-right">
+                <div class="lang-switch desktop-only">
+                    <a class="lang-flag" href="index.html" title="Français"><img alt="FR" src="images/fr_flag.png" /></a>
+                </div>
+                <div class="hamburger-menu" id="hamburger" onclick="toggleMenu()">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
         </div>
-        <div class="hamburger-menu" onclick="toggleMenu()"><span></span><span></span><span></span></div>
-        <nav id="nav-menu">
-            <a href="#home" onclick="toggleMenu()">בית</a>
-            <a href="#about" onclick="toggleMenu()">אודות</a>
-            <a href="#services" onclick="toggleMenu()">שירותים</a>
-            <a href="#projects" onclick="toggleMenu()">פרויקטים</a>
-            <a href="#testimonials" onclick="toggleMenu()">המלצות</a>
-            <a href="#contact" onclick="toggleMenu()">צור קשר</a>
-            <div class="mobile-lang"><a class="lang-flag" href="index.html" title="Français"><img alt="FR" src="images/fr_flag.png" /></a></div>
-        </nav>
-        <div class="lang-switch desktop-only"><a class="lang-flag" href="index.html" title="Français"><img alt="FR" src="images/fr_flag.png" /></a></div>
     </header>
 
+    <!-- Hero -->
     <section class="hero" id="home">
         <div class="hero-carousel">
             <img alt="אתר שיפוץ" class="active" src="images/echelle chantier.jpg" />
             <img alt="צביעה" src="images/Peinture.jpg" />
             <img alt="שיפוץ" src="images/chantier.jpeg" />
-            <img alt="חוץ הבית" src="images/exterieur chantier.jpeg" />
+            <img alt="חזית הבית" src="images/exterieur chantier.jpeg" />
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <div class="hero-left-panel">
-                <h1>השיפוץ שלכם בישראל – בראש שקט</h1>
-                <p class="hero-intro">אורן שאול הקבלן ינהל את הפרויקט שלכם עם הנוחות של ליווי בצרפתית ועברית משלב התכנון ועד לתוצאה בעמידה בסטנדרטים הגבוהים ביותר</p>
+            <div class="hero-left-panel animate-left">
+                <div class="hero-tag">🏠 מומחה שיפוצים עם 30 שנות ניסיון</div>
+                <h1>השיפוץ שלכם בישראל, <span class="hero-highlight">בראש שקט.</span></h1>
+                <p class="hero-intro">אורן שאול, קבלן ומנהל עבודה, ינהל את הפרויקט שלכם עם ליווי מלא בצרפתית ועברית. מהתכנון ועד הגימורים, אנו מבטיחים את הסטנדרטים הגבוהים ביותר.</p>
                 <div class="hero-cta-group">
-                    <button class="cta primary" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">בקשת הצעת מחיר חינם</button>
-                    <button class="cta secondary" onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });">לראות את הפרויקטים שלנו</button>
+                    <button class="cta primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+                        <i class="fas fa-paper-plane"></i> בקשת הצעת מחיר חינם
+                    </button>
+                    <button class="cta secondary" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">
+                        <i class="fas fa-images"></i> לראות את הפרויקטים שלנו
+                    </button>
                 </div>
                 <ul class="hero-badges">
-                    <li><span class="badge-icon">✔</span> נציג דובר צרפתית</li>
-                    <li><span class="badge-icon">✔</span> צוות מקומי מנוסה</li>
-                    <li><span class="badge-icon">✔</span> מחירים שקופים ומאוזנים</li>
+                    <li><span class="badge-icon"><i class="fas fa-check-circle"></i></span> נציג דובר צרפתית ועברית</li>
+                    <li><span class="badge-icon"><i class="fas fa-check-circle"></i></span> צוות מקומי מנוסה</li>
+                    <li><span class="badge-icon"><i class="fas fa-check-circle"></i></span> מחירים שקופים ומאוזנים</li>
                 </ul>
             </div>
-            <div class="hero-chef-panel">
-                <div class="chef-photo"><img alt="מנהל עבודה" src="images/oren.jpeg" /></div>
+            <div class="hero-chef-panel animate-right">
+                <div class="chef-photo">
+                    <img alt="אורן שאול" src="images/oren.jpeg" />
+                    <div class="chef-badge">⭐ מומחה מוסמך</div>
+                </div>
                 <div class="chef-info">
                     <div class="chef-name">אורן שאול</div>
-                    <div class="chef-desc">מעל 30 שנות ניסיון בשיפוצים בישראל.</div>
+                    <div class="chef-title">קבלן ומנהל עבודה</div>
+                    <div class="chef-desc">מעל 30 שנות ניסיון בשיפוצים, עיצוב פנים וגימורים איכותיים.</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="scroll-arrow"><i class="fas fa-chevron-down"></i></div>
+        </div>
+    </section>
+
+    <!-- Stats Strip -->
+    <div class="stats-strip">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number" data-target="30">0</div>
+                <div class="stat-plus">+</div>
+                <div class="stat-label">שנות ניסיון</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="500">0</div>
+                <div class="stat-plus">+</div>
+                <div class="stat-label">פרויקטים שבוצעו</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="100">0</div>
+                <div class="stat-plus">%</div>
+                <div class="stat-label">לקוחות מרוצים</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="3">0</div>
+                <div class="stat-plus"></div>
+                <div class="stat-label">ערים שאנו משרתים</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About -->
+    <section class="fade-section" id="about">
+        <div class="section-header">
+            <div class="section-tag">הסיפור שלנו</div>
+            <h2 class="section-title">מי הקבלן?</h2>
+            <p class="section-subtitle">בעל מלאכה נלהב בשירות הפרויקט שלכם</p>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p>בעל ניסיון של 30 שנה בתחום הבנייה, אני מעמיד את הידע והתשוקה שלי לשירות הפרויקט שלכם. המטרה שלי: עבודה מסודרת, קפדנית ונאמנה לציפיות שלכם.</p>
+                <p>אנו מכירים היטב את השוק הישראלי ומבטיחים ביצוע מוקפד ואיכותי כדי שתוכלו לעבור את השיפוץ בראש שקט. בין אם אתם משפצים דירה בתל-אביב, בית בנתניה או דירת נופש בירושלים – אנחנו מלווים אתכם בכל שלב.</p>
+                <div class="about-features">
+                    <div class="about-feature"><i class="fas fa-tools"></i><span>בעלי מלאכה מוסמכים</span></div>
+                    <div class="about-feature"><i class="fas fa-shield-alt"></i><span>אחריות על העבודה</span></div>
+                    <div class="about-feature"><i class="fas fa-clock"></i><span>עמידה בלוחות זמנים</span></div>
+                    <div class="about-feature"><i class="fas fa-comments"></i><span>מעקב בזמן אמת</span></div>
+                </div>
+            </div>
+            <div class="about-img-wrapper">
+                <div class="about-img" style="background-image:url('images/Salon IA.png');"></div>
+                <div class="about-img-badge">
+                    <i class="fas fa-award"></i>
+                    <span>30 שנות<br>מצוינות</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="fade-section" id="about">
-        <h2 class="section-title">מי הקבלן?</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>עובד בתחום 30 שנה עם המון ידע ונסיון. הסיפוק שלי לבצע את העבודות שאתם רוצים תוך הקפדה , נקיון , יסודיות ,חריצות ושמירה על הבחירות שלכם.</p>
-                <p>אנו מכירים היטב את השוק הישראלי ומבטיחים ביצוע מוקפד ואיכותי כדי שתוכלו לעבור את השיפוץ בראש שקט. בין אם אתם משפצים דירה בתל-אביב, בית בנתניה או דירת נופש בירושלים – אנחנו מלווים אתכם בכל שלב.</p>
-            </div>
-            <div class="about-img" style="background-image:url('images/Salon IA.png');"></div>
+    <!-- Services -->
+    <section class="fade-section services-section" id="services">
+        <div class="section-header">
+            <div class="section-tag">מה אנחנו עושים</div>
+            <h2 class="section-title">השירותים שלנו</h2>
+            <p class="section-subtitle">שירותים מקיפים לכל פרויקטי השיפוץ שלכם</p>
         </div>
-    </section>
-
-    <section class="fade-section" id="services">
-        <h2 class="section-title">השירותים שלנו</h2>
         <div class="services-grid">
             <div class="service-card">
-                <img alt="שיפוץ פנים" src="images/Peinture.jpg" />
-                <div class="service-body"><div class="service-title">שיפוץ פנים</div><div class="service-desc">ריענון מלא של הנכס שלכם – מהשלד ועד הגימורים.</div></div>
+                <div class="service-img-wrapper">
+                    <img alt="שיפוץ פנים" src="images/Peinture.jpg" />
+                    <div class="service-icon-overlay"><i class="fas fa-home"></i></div>
+                </div>
+                <div class="service-body">
+                    <div class="service-title">שיפוץ פנים</div>
+                    <div class="service-desc">ריענון מלא של הנכס שלכם – מהשלד ועד הגימורים.</div>
+                    <div class="service-link">לפרטים נוספים <i class="fas fa-arrow-left"></i></div>
+                </div>
             </div>
             <div class="service-card">
-                <img alt="שיפוץ חוץ" src="images/exterieur aller.jpeg" />
-                <div class="service-body"><div class="service-title">שיפוץ חוץ</div><div class="service-desc">עבודות חוץ, חידוש חזיתות ושיפור הגישה.</div></div>
+                <div class="service-img-wrapper">
+                    <img alt="שיפוץ חוץ" src="images/exterieur aller.jpeg" />
+                    <div class="service-icon-overlay"><i class="fas fa-building"></i></div>
+                </div>
+                <div class="service-body">
+                    <div class="service-title">שיפוץ חוץ</div>
+                    <div class="service-desc">עבודות חוץ, חידוש חזיתות ושיפור הגישה לנכס.</div>
+                    <div class="service-link">לפרטים נוספים <i class="fas fa-arrow-left"></i></div>
+                </div>
             </div>
             <div class="service-card">
-                <img alt="חדר רחצה מעוצב" src="images/douche.jpeg" />
-                <div class="service-body"><div class="service-title">חדר רחצה מעוצב</div><div class="service-desc">הפיכת חדרי הרחצה למרחבי רווחה מודרניים.</div></div>
+                <div class="service-img-wrapper">
+                    <img alt="חדר רחצה מעוצב" src="images/douche.jpeg" />
+                    <div class="service-icon-overlay"><i class="fas fa-bath"></i></div>
+                </div>
+                <div class="service-body">
+                    <div class="service-title">חדר רחצה מעוצב</div>
+                    <div class="service-desc">הפיכת חדרי הרחצה למרחבי רווחה מודרניים ואלגנטיים.</div>
+                    <div class="service-link">לפרטים נוספים <i class="fas fa-arrow-left"></i></div>
+                </div>
             </div>
             <div class="service-card">
-                <img alt="עבודת מומחים" src="images/laser chantier.jpeg" />
-                <div class="service-body"><div class="service-title">עבודת אינסטלציה</div><div class="service-desc">צנרת איכותית וחומרים ברמה גבוה.</div></div>
+                <div class="service-img-wrapper">
+                    <img alt="עבודות מומחים" src="images/laser chantier.jpeg" />
+                    <div class="service-icon-overlay"><i class="fas fa-wrench"></i></div>
+                </div>
+                <div class="service-body">
+                    <div class="service-title">אינסטלציה ותשתיות</div>
+                    <div class="service-desc">צנרת איכותית והתקנה מקצועית לתוצאה עמידה וארוכת טווח.</div>
+                    <div class="service-link">לפרטים נוספים <i class="fas fa-arrow-left"></i></div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Projects -->
     <section class="fade-section" id="projects">
-        <h2 class="section-title">הפרויקטים שלנו</h2>
+        <div class="section-header">
+            <div class="section-tag">העבודות שלנו</div>
+            <h2 class="section-title">הפרויקטים שלנו</h2>
+            <p class="section-subtitle">הזיזו את הסרגל כדי לראות את השינוי לפני / אחרי</p>
+        </div>
         <div class="projects-grid">
             <div class="project-card">
                 <div class="project-img-wrapper" dir="ltr">
@@ -101,65 +211,93 @@
                     <img class="project-before-img" alt="לפני" src="images/chantier interieur.jpg" />
                     <div class="label-badge label-before">לפני</div>
                     <div class="label-badge label-after">אחרי</div>
-                    <div class="slider-handle"><div class="slider-button"></div></div>
+                    <div class="slider-handle"><div class="slider-button"><i class="fas fa-arrows-left-right"></i></div></div>
                     <input class="project-slider" type="range" min="0" max="100" value="50" oninput="updateSlider(this)" />
                 </div>
-                <div class="project-info"><div class="project-title">סלון מואר</div><div class="project-city">תל-אביב</div></div>
+                <div class="project-info">
+                    <div class="project-title">סלון מואר</div>
+                    <div class="project-city"><i class="fas fa-map-marker-alt"></i> תל-אביב</div>
+                </div>
             </div>
-
             <div class="project-card">
                 <div class="project-img-wrapper" dir="ltr">
                     <img class="project-after-img" alt="אחרי" src="images/lavabo apres.jpeg" />
                     <img class="project-before-img" alt="לפני" src="images/lavabo ancien.jpeg" />
                     <div class="label-badge label-before">לפני</div>
                     <div class="label-badge label-after">אחרי</div>
-                    <div class="slider-handle"><div class="slider-button"></div></div>
+                    <div class="slider-handle"><div class="slider-button"><i class="fas fa-arrows-left-right"></i></div></div>
                     <input class="project-slider" type="range" min="0" max="100" value="50" oninput="updateSlider(this)" />
                 </div>
-                <div class="project-info"><div class="project-title">חדר רחצה</div><div class="project-city">נתניה</div></div>
+                <div class="project-info">
+                    <div class="project-title">חדר רחצה</div>
+                    <div class="project-city"><i class="fas fa-map-marker-alt"></i> נתניה</div>
+                </div>
             </div>
-
             <div class="project-card">
                 <div class="project-img-wrapper" dir="ltr">
-                    <img class="project-after-img img-dezoom" alt="Après" src="images/toilet 3.jpeg" />
+                    <img class="project-after-img img-dezoom" alt="אחרי" src="images/toilet 3.jpeg" />
                     <img class="project-before-img" alt="לפני" src="images/chantier.jpeg" />
                     <div class="label-badge label-before">לפני</div>
                     <div class="label-badge label-after">אחרי</div>
-                    <div class="slider-handle"><div class="slider-button"></div></div>
+                    <div class="slider-handle"><div class="slider-button"><i class="fas fa-arrows-left-right"></i></div></div>
                     <input class="project-slider" type="range" min="0" max="100" value="50" oninput="updateSlider(this)" />
                 </div>
-                <div class="project-info"><div class="project-title">שירותים</div><div class="project-city">רמת גן</div></div>
+                <div class="project-info">
+                    <div class="project-title">שירותים</div>
+                    <div class="project-city"><i class="fas fa-map-marker-alt"></i> רמת גן</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="fade-section" id="testimonials">
-        <h2 class="section-title">לקוחות ממליצים</h2>
+    <!-- Testimonials -->
+    <section class="fade-section testimonials-section" id="testimonials">
+        <div class="section-header">
+            <div class="section-tag">הם סומכים עלינו</div>
+            <h2 class="section-title">לקוחות ממליצים</h2>
+        </div>
         <div class="testimonials-grid">
             <div class="testimonial">
+                <div class="testimonial-quote"><i class="fas fa-quote-right"></i></div>
                 <div class="testimonial-stars"><span>★★★★★</span></div>
-                <div class="testimonial-text">"עבודה מושלמת ושירות אישי בצרפתית, ליוו אותנו בכל שלב."</div>
-                <div class="testimonial-author">שרה – תל-אביב</div>
+                <div class="testimonial-text">עבודה מושלמת ושירות אישי בצרפתית, ליוו אותנו בכל שלב. הדירה נראית מדהים!</div>
+                <div class="testimonial-footer">
+                    <div class="testimonial-avatar">ש</div>
+                    <div class="testimonial-author">שרה – תל-אביב</div>
+                </div>
             </div>
             <div class="testimonial">
+                <div class="testimonial-quote"><i class="fas fa-quote-right"></i></div>
                 <div class="testimonial-stars"><span>★★★★★</span></div>
-                <div class="testimonial-text">"צוות מקצועי ומהיר. הפכו את המטבח הישן למודרני ופונקציונלי."</div>
-                <div class="testimonial-author">דוד – נתניה</div>
+                <div class="testimonial-text">צוות מקצועי ומהיר. הפכו את המטבח הישן למודרני ופונקציונלי לחלוטין.</div>
+                <div class="testimonial-footer">
+                    <div class="testimonial-avatar">ד</div>
+                    <div class="testimonial-author">דוד – נתניה</div>
+                </div>
             </div>
             <div class="testimonial">
+                <div class="testimonial-quote"><i class="fas fa-quote-right"></i></div>
                 <div class="testimonial-stars"><span>★★★★★</span></div>
-                <div class="testimonial-text">"אני ממליצה על רנוב'אולים בחום."</div>
-                <div class="testimonial-author">רחל – ירושלים</div>
+                <div class="testimonial-text">אני ממליצה בחום על רנוב'עולים על הרצינות ואיכות העבודה המדהימה שלהם.</div>
+                <div class="testimonial-footer">
+                    <div class="testimonial-avatar">ר</div>
+                    <div class="testimonial-author">רחל – ירושלים</div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Contact -->
     <section class="fade-section" id="contact" dir="rtl">
-        <h2 class="section-title">צור קשר</h2>
+        <div class="section-header">
+            <div class="section-tag">התחילו את הפרויקט שלכם</div>
+            <h2 class="section-title">צור קשר</h2>
+            <p class="section-subtitle">מענה מובטח תוך 24 שעות — הצעת מחיר חינם וללא התחייבות</p>
+        </div>
         <div class="contact-container">
             <div class="contact-info">
                 <h3>בואו נדבר על הפרויקט שלכם</h3>
-
+                <p class="contact-intro">הצוות שלנו זמין לענות על כל שאלה ולהכין הצעת מחיר מותאמת אישית.</p>
                 <div class="info-item">
                     <div class="icon-box"><img src="images/fr_flag.png" alt="FR"></div>
                     <div class="info-text">
@@ -167,7 +305,6 @@
                         <a class="info-link" href="tel:+33652245525" dir="ltr">+33 6 52 24 55 25</a>
                     </div>
                 </div>
-
                 <div class="info-item">
                     <div class="icon-box"><img src="images/il_flag.png" alt="IL"></div>
                     <div class="info-text">
@@ -175,7 +312,6 @@
                         <a class="info-link" href="tel:+972546640010" dir="ltr">+972 54-664-0010</a>
                     </div>
                 </div>
-
                 <div class="info-item">
                     <div class="icon-box"><span class="icon" style="font-size:24px;">✉️</span></div>
                     <div class="info-text">
@@ -184,86 +320,132 @@
                     </div>
                 </div>
             </div>
-
             <div class="contact-form">
                 <form id="contact-form-he">
-                    <div class="form-group">
-                        <label>שם</label>
-                        <input name="name" placeholder="שמך" required type="text"
+                    <div class="form-group floating">
+                        <input name="name" placeholder=" " required type="text"
                                oninvalid="this.setCustomValidity('נא למלא שדה זה')" oninput="this.setCustomValidity('')" />
+                        <label>שמך</label>
                     </div>
-                    <div class="form-group">
-                        <label>אימייל</label>
-                        <input name="email" placeholder="האימייל שלך" required type="email"
+                    <div class="form-group floating">
+                        <input name="email" placeholder=" " required type="email"
                                oninvalid="this.setCustomValidity('נא להזין כתובת אימייל תקינה')" oninput="this.setCustomValidity('')" />
+                        <label>האימייל שלך</label>
                     </div>
-                    <div class="form-group">
-                        <label>טלפון</label>
-                        <input name="phone" placeholder="מספר טלפון" required type="tel"
+                    <div class="form-group floating">
+                        <input name="phone" placeholder=" " required type="tel"
                                oninvalid="this.setCustomValidity('נא למלא שדה זה')" oninput="this.setCustomValidity('')" />
+                        <label>מספר טלפון</label>
                     </div>
-                    <div class="form-group">
-                        <label>הודעה</label>
-                        <textarea name="message" placeholder="הודעה..." required
+                    <div class="form-group floating">
+                        <textarea name="message" placeholder=" " required rows="4"
                                   oninvalid="this.setCustomValidity('נא למלא שדה זה')" oninput="this.setCustomValidity('')"></textarea>
+                        <label>הודעה</label>
                     </div>
                     <input type="hidden" name="lang" value="he" />
                     <input type="hidden" name="token" value="Oren-RenovOlim-2025" />
-                    <button type="submit" id="submit-btn-he">שלח</button>
+                    <button type="submit" id="submit-btn-he">
+                        <span>שלח הודעה</span> <i class="fas fa-paper-plane"></i>
+                    </button>
                 </form>
                 <div id="contact-status" class="form-status"></div>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="maisondetourer.png" alt="לוגו" class="footer-logo-img" />
+                    <span>רנוב'עולים</span>
+                </div>
+                <p>מומחים בשיפוצים בישראל מזה 30 שנה. איכות ומקצועיות לכל הפרויקטים שלכם.</p>
+            </div>
+            <div class="footer-links">
+                <h4>ניווט</h4>
+                <a href="#home">בית</a>
+                <a href="#about">אודות</a>
+                <a href="#services">שירותים</a>
+                <a href="#projects">פרויקטים</a>
+                <a href="#testimonials">המלצות</a>
+                <a href="#contact">צור קשר</a>
+            </div>
+            <div class="footer-contact">
+                <h4>צרו קשר</h4>
+                <a href="tel:+33652245525"><i class="fas fa-phone"></i> +33 6 52 24 55 25</a>
+                <a href="tel:+972546640010"><i class="fas fa-phone"></i> +972 54-664-0010</a>
+                <a href="mailto:contact.renovolim@gmail.com"><i class="fas fa-envelope"></i> contact.renovolim@gmail.com</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 רנוב'עולים. כל הזכויות שמורות.</p>
+            <a href="index.html" class="footer-lang">
+                <img src="images/fr_flag.png" alt="FR" /> Français
+            </a>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" aria-label="חזרה לראש הדף" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <script src="script.js"></script>
     <script>
         const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzkqEP6euDkaH6wsKEghU9XCD92eNEWCxJFXm7tHUL_4E7uAsiD_RwzbJ-7Xtijr8LGWQ/exec";
-        document.addEventListener("DOMContentLoaded", function () {
-            const form = document.getElementById("contact-form-he");
-            const statusEl = document.getElementById("contact-status");
-            const btn = document.getElementById("submit-btn-he");
 
+        document.addEventListener("DOMContentLoaded", function () {
+            const form     = document.getElementById("contact-form-he");
+            const statusEl = document.getElementById("contact-status");
+            const btn      = document.getElementById("submit-btn-he");
             if (!form) return;
+
             form.addEventListener("submit", function (e) {
                 e.preventDefault();
                 const formData = new FormData(form);
-
-                const originalText = btn.innerText;
-                btn.innerText = "שולח...";
+                const originalHTML = btn.innerHTML;
+                btn.innerHTML = '<span>שולח…</span> <i class="fas fa-spinner fa-spin"></i>';
                 btn.classList.add("btn-loading");
+                btn.disabled = true;
 
                 fetch(WEB_APP_URL, { method: "POST", body: formData, mode: "no-cors" })
                     .then(() => {
-                        statusEl.textContent = "תודה! נשלח בהצלחה.";
-                        statusEl.style.color = "green";
+                        statusEl.textContent = "✅ תודה! ההודעה נשלחה בהצלחה.";
+                        statusEl.className = "form-status success";
                         form.reset();
                     })
                     .catch(() => {
-                        statusEl.textContent = "שגיאה.";
-                        statusEl.style.color = "red";
+                        statusEl.textContent = "❌ שגיאה טכנית. אנא נסו שנית.";
+                        statusEl.className = "form-status error";
                     })
                     .finally(() => {
-                        btn.innerText = originalText;
+                        btn.innerHTML = originalHTML;
                         btn.classList.remove("btn-loading");
+                        btn.disabled = false;
                     });
             });
         });
 
         function toggleMenu() {
             document.getElementById('nav-menu').classList.toggle('open');
-            document.querySelector('.hamburger-menu').classList.toggle('toggle');
+            document.getElementById('hamburger').classList.toggle('toggle');
+        }
+
+        function closeMenu() {
+            document.getElementById('nav-menu').classList.remove('open');
+            document.getElementById('hamburger').classList.remove('toggle');
         }
 
         function updateSlider(rangeInput) {
-            const wrapper = rangeInput.closest('.project-img-wrapper');
+            const wrapper   = rangeInput.closest('.project-img-wrapper');
             const beforeImg = wrapper.querySelector('.project-before-img');
-            const handle = wrapper.querySelector('.slider-handle');
-            const val = rangeInput.value;
+            const handle    = wrapper.querySelector('.slider-handle');
+            const val       = rangeInput.value;
             beforeImg.style.clipPath = `polygon(0 0, ${val}% 0, ${val}% 100%, 0 100%)`;
             handle.style.left = `${val}%`;
         }
     </script>
 </body>
-
 </html>

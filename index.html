@@ -4,97 +4,206 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Rénov'Olim – Rénovation en Israël</title>
-    <link rel="icon" type="image/png" href="maisondetourer.png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <meta name="description" content="Rénov'Olim, expert en rénovation en Israël. Oren Shaul, maître d'œuvre avec 30 ans d'expérience, vous accompagne en français et en hébreu." />
+    <link rel="icon" type="image/png" href="maisondetourer.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link href="style.css" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        <div class="logo-wrapper">
-            <img src="maisondetourer.png" alt="Logo" class="header-logo">
-            <span class="logo">Rénov'Olim</span>
+    <!-- Scroll Progress -->
+    <div id="scroll-progress"></div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="header-inner">
+            <div class="logo-wrapper">
+                <img src="maisondetourer.png" alt="Logo Rénov'Olim" class="header-logo" />
+                <span class="logo">Rénov'<span class="logo-accent">Olim</span></span>
+            </div>
+            <nav id="nav-menu">
+                <a href="#home" onclick="closeMenu()">Accueil</a>
+                <a href="#about" onclick="closeMenu()">À propos</a>
+                <a href="#services" onclick="closeMenu()">Services</a>
+                <a href="#projects" onclick="closeMenu()">Réalisations</a>
+                <a href="#testimonials" onclick="closeMenu()">Avis</a>
+                <a href="#contact" onclick="closeMenu()">Contact</a>
+                <div class="mobile-lang">
+                    <a class="lang-flag" href="hebrew.html" title="עברית"><img alt="Hebrew" src="images/il_flag.png" /></a>
+                </div>
+            </nav>
+            <div class="header-right">
+                <div class="lang-switch desktop-only">
+                    <a class="lang-flag" href="hebrew.html" title="עברית"><img alt="Hebrew" src="images/il_flag.png" /></a>
+                </div>
+                <div class="hamburger-menu" id="hamburger" onclick="toggleMenu()">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
         </div>
-       
-        <div class="hamburger-menu" onclick="toggleMenu()"><span></span><span></span><span></span></div>
-        <nav id="nav-menu">
-            <a href="#home" onclick="toggleMenu()">Accueil</a>
-            <a href="#about" onclick="toggleMenu()">À propos</a>
-            <a href="#services" onclick="toggleMenu()">Services</a>
-            <a href="#projects" onclick="toggleMenu()">Réalisations</a>
-            <a href="#testimonials" onclick="toggleMenu()">Avis</a>
-            <a href="#contact" onclick="toggleMenu()">Contact</a>
-            <div class="mobile-lang"><a class="lang-flag" href="hebrew.html" title="עברית"><img alt="Hebrew" src="images/il_flag.png" /></a></div>
-        </nav>
-        <div class="lang-switch desktop-only"><a class="lang-flag" href="hebrew.html" title="עברית"><img alt="Hebrew" src="images/il_flag.png" /></a></div>
     </header>
 
+    <!-- Hero -->
     <section class="hero" id="home">
         <div class="hero-carousel">
             <img alt="Chantier" class="active" src="images/echelle chantier.jpg" />
             <img alt="Peinture" src="images/Peinture.jpg" />
-            <img alt="chantier" src="images/chantier.jpeg" />
-            <img alt="Pièce moderne" src="images/exterieur chantier.jpeg" />
+            <img alt="Chantier" src="images/chantier.jpeg" />
+            <img alt="Extérieur" src="images/exterieur chantier.jpeg" />
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <div class="hero-left-panel">
-                <h1>Votre rénovation en Israël, en toute sérénité.</h1>
-                <p class="hero-intro">Oren Shaul, maître d'œuvre, pilote votre projet avec le confort d'un accompagnement complet en français et en hébreu. De la conception aux finitions, nous garantissons les standards les plus élevés.</p>
+            <div class="hero-left-panel animate-left">
+                <div class="hero-tag">🏠 Expert en rénovation depuis 30 ans</div>
+                <h1>Votre rénovation en Israël, <span class="hero-highlight">en toute sérénité.</span></h1>
+                <p class="hero-intro">Oren Shaul, maître d'œuvre, pilote votre projet avec un accompagnement complet en français et en hébreu. De la conception aux finitions, nous garantissons les standards les plus élevés.</p>
                 <div class="hero-cta-group">
-                    <button class="cta primary" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">Demander un devis gratuit</button>
-                    <button class="cta secondary" onclick="document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });">Voir nos réalisations</button>
+                    <button class="cta primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+                        <i class="fas fa-paper-plane"></i> Demander un devis gratuit
+                    </button>
+                    <button class="cta secondary" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">
+                        <i class="fas fa-images"></i> Voir nos réalisations
+                    </button>
                 </div>
                 <ul class="hero-badges">
-                    <li><span class="badge-icon">✔</span> Interlocuteur francophone dédié</li>
-                    <li><span class="badge-icon">✔</span> Équipe locale expérimentée</li>
-                    <li><span class="badge-icon">✔</span> Tarifs maîtrisés et transparents</li>
+                    <li><span class="badge-icon"><i class="fas fa-check-circle"></i></span> Interlocuteur francophone dédié</li>
+                    <li><span class="badge-icon"><i class="fas fa-check-circle"></i></span> Équipe locale expérimentée</li>
+                    <li><span class="badge-icon"><i class="fas fa-check-circle"></i></span> Tarifs maîtrisés et transparents</li>
                 </ul>
             </div>
-            <div class="hero-chef-panel">
-                <div class="chef-photo"><img alt="Chef" src="images/oren.jpeg" /></div>
+            <div class="hero-chef-panel animate-right">
+                <div class="chef-photo">
+                    <img alt="Oren Shaul" src="images/oren.jpeg" />
+                    <div class="chef-badge">⭐ Expert Certifié</div>
+                </div>
                 <div class="chef-info">
                     <div class="chef-name">Oren Shaul</div>
-                    <div class="chef-desc">Plus de 30 ans d'expérience. Expert en rénovation intérieure et finitions.</div>
+                    <div class="chef-title">Maître d'œuvre</div>
+                    <div class="chef-desc">Plus de 30 ans d'expérience en rénovation intérieure et finitions de prestige.</div>
                 </div>
             </div>
         </div>
+        <div class="hero-scroll-indicator">
+            <div class="scroll-arrow"><i class="fas fa-chevron-down"></i></div>
+        </div>
     </section>
 
+    <!-- Stats Strip -->
+    <div class="stats-strip">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number" data-target="30">0</div>
+                <div class="stat-plus">+</div>
+                <div class="stat-label">Années d'expérience</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="500">0</div>
+                <div class="stat-plus">+</div>
+                <div class="stat-label">Projets réalisés</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="100">0</div>
+                <div class="stat-plus">%</div>
+                <div class="stat-label">Clients satisfaits</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="3">0</div>
+                <div class="stat-plus"></div>
+                <div class="stat-label">Villes desservies</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About -->
     <section class="fade-section" id="about">
-        <h2 class="section-title">Qui est l'entrepreneur ?</h2>
+        <div class="section-header">
+            <div class="section-tag">Notre histoire</div>
+            <h2 class="section-title">Qui est l'entrepreneur ?</h2>
+            <p class="section-subtitle">Un artisan passionné au service de votre projet de rénovation</p>
+        </div>
         <div class="about-content">
             <div class="about-text">
                 <p>Fort de 30 ans d'expérience dans le bâtiment, je mets mon savoir-faire et ma passion au service de votre projet. Mon objectif : un travail soigné, rigoureux et fidèle à vos attentes.</p>
                 <p>Nous maîtrisons parfaitement les standards du marché israélien pour vous garantir une exécution de haute qualité, sans stress. Que vous rénoviez un appartement à Tel-Aviv, une maison à Netanya ou un pied-à-terre à Jérusalem, nous vous accompagnons de A à Z.</p>
+                <div class="about-features">
+                    <div class="about-feature"><i class="fas fa-tools"></i><span>Artisans qualifiés</span></div>
+                    <div class="about-feature"><i class="fas fa-shield-alt"></i><span>Garantie décennale</span></div>
+                    <div class="about-feature"><i class="fas fa-clock"></i><span>Respect des délais</span></div>
+                    <div class="about-feature"><i class="fas fa-comments"></i><span>Suivi en temps réel</span></div>
+                </div>
             </div>
-            <div class="about-img" style="background-image:url('images/Salon IA.png');"></div>
+            <div class="about-img-wrapper">
+                <div class="about-img" style="background-image:url('images/Salon IA.png');"></div>
+                <div class="about-img-badge">
+                    <i class="fas fa-award"></i>
+                    <span>30 ans<br>d'excellence</span>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="fade-section" id="services">
-        <h2 class="section-title">Nos services</h2>
+    <!-- Services -->
+    <section class="fade-section services-section" id="services">
+        <div class="section-header">
+            <div class="section-tag">Ce que nous faisons</div>
+            <h2 class="section-title">Nos services</h2>
+            <p class="section-subtitle">Des prestations complètes pour tous vos projets de rénovation</p>
+        </div>
         <div class="services-grid">
             <div class="service-card">
-                <img alt="Rénovation intérieur" src="images/Peinture.jpg" />
-                <div class="service-body"><div class="service-title">Rénovation intérieure</div><div class="service-desc">Remise à neuf complète de votre bien, du gros œuvre jusqu'aux finitions.</div></div>
+                <div class="service-img-wrapper">
+                    <img alt="Rénovation intérieure" src="images/Peinture.jpg" />
+                    <div class="service-icon-overlay"><i class="fas fa-home"></i></div>
+                </div>
+                <div class="service-body">
+                    <div class="service-title">Rénovation intérieure</div>
+                    <div class="service-desc">Remise à neuf complète de votre bien, du gros œuvre jusqu'aux finitions.</div>
+                    <div class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></div>
+                </div>
             </div>
             <div class="service-card">
-                <img alt="Rénovation extérieur" src="images/exterieur aller.jpeg" />
-                <div class="service-body"><div class="service-title">Rénovation extérieure</div><div class="service-desc">Ravalement de façade, aménagements extérieurs et éclairages modernes.</div></div>
+                <div class="service-img-wrapper">
+                    <img alt="Rénovation extérieure" src="images/exterieur aller.jpeg" />
+                    <div class="service-icon-overlay"><i class="fas fa-building"></i></div>
+                </div>
+                <div class="service-body">
+                    <div class="service-title">Rénovation extérieure</div>
+                    <div class="service-desc">Ravalement de façade, aménagements extérieurs et éclairages modernes.</div>
+                    <div class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></div>
+                </div>
             </div>
             <div class="service-card">
-                <img alt="Salle de bain" src="images/douche.jpeg" />
-                <div class="service-body"><div class="service-title">Salle de bain design</div><div class="service-desc">Création d'espaces de bain modernes, fonctionnels et élégants.</div></div>
+                <div class="service-img-wrapper">
+                    <img alt="Salle de bain design" src="images/douche.jpeg" />
+                    <div class="service-icon-overlay"><i class="fas fa-bath"></i></div>
+                </div>
+                <div class="service-body">
+                    <div class="service-title">Salle de bain design</div>
+                    <div class="service-desc">Création d'espaces de bain modernes, fonctionnels et élégants.</div>
+                    <div class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></div>
+                </div>
             </div>
             <div class="service-card">
-                <img alt="Plomberie" src="images/laser chantier.jpeg" />
-                <div class="service-body"><div class="service-title">Plomberie & Technique</div><div class="service-desc">Tuyauterie de qualité et installation professionnelle pour un résultat durable.</div></div>
+                <div class="service-img-wrapper">
+                    <img alt="Plomberie" src="images/laser chantier.jpeg" />
+                    <div class="service-icon-overlay"><i class="fas fa-wrench"></i></div>
+                </div>
+                <div class="service-body">
+                    <div class="service-title">Plomberie &amp; Technique</div>
+                    <div class="service-desc">Tuyauterie de qualité et installation professionnelle pour un résultat durable.</div>
+                    <div class="service-link">En savoir plus <i class="fas fa-arrow-right"></i></div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Projects -->
     <section class="fade-section" id="projects">
-        <h2 class="section-title">Nos réalisations</h2>
+        <div class="section-header">
+            <div class="section-tag">Notre travail</div>
+            <h2 class="section-title">Nos réalisations</h2>
+            <p class="section-subtitle">Glissez le curseur pour voir la transformation avant / après</p>
+        </div>
         <div class="projects-grid">
             <div class="project-card">
                 <div class="project-img-wrapper">
@@ -102,10 +211,13 @@
                     <img class="project-before-img" alt="Avant" src="images/chantier interieur.jpg" />
                     <div class="label-badge label-before">Avant</div>
                     <div class="label-badge label-after">Après</div>
-                    <div class="slider-handle"><div class="slider-button"></div></div>
+                    <div class="slider-handle"><div class="slider-button"><i class="fas fa-arrows-left-right"></i></div></div>
                     <input class="project-slider" type="range" min="0" max="100" value="50" oninput="updateSlider(this)" />
                 </div>
-                <div class="project-info"><div class="project-title">Salon lumineux</div><div class="project-city">Tel-Aviv</div></div>
+                <div class="project-info">
+                    <div class="project-title">Salon lumineux</div>
+                    <div class="project-city"><i class="fas fa-map-marker-alt"></i> Tel-Aviv</div>
+                </div>
             </div>
             <div class="project-card">
                 <div class="project-img-wrapper">
@@ -113,10 +225,13 @@
                     <img class="project-before-img" alt="Avant" src="images/lavabo ancien.jpeg" />
                     <div class="label-badge label-before">Avant</div>
                     <div class="label-badge label-after">Après</div>
-                    <div class="slider-handle"><div class="slider-button"></div></div>
+                    <div class="slider-handle"><div class="slider-button"><i class="fas fa-arrows-left-right"></i></div></div>
                     <input class="project-slider" type="range" min="0" max="100" value="50" oninput="updateSlider(this)" />
                 </div>
-                <div class="project-info"><div class="project-title">Salle d'eau</div><div class="project-city">Netanya</div></div>
+                <div class="project-info">
+                    <div class="project-title">Salle d'eau</div>
+                    <div class="project-city"><i class="fas fa-map-marker-alt"></i> Netanya</div>
+                </div>
             </div>
             <div class="project-card">
                 <div class="project-img-wrapper">
@@ -124,41 +239,65 @@
                     <img class="project-before-img" alt="Avant" src="images/chantier.jpeg" />
                     <div class="label-badge label-before">Avant</div>
                     <div class="label-badge label-after">Après</div>
-                    <div class="slider-handle"><div class="slider-button"></div></div>
+                    <div class="slider-handle"><div class="slider-button"><i class="fas fa-arrows-left-right"></i></div></div>
                     <input class="project-slider" type="range" min="0" max="100" value="50" oninput="updateSlider(this)" />
                 </div>
-                <div class="project-info"><div class="project-title">Toilettes</div><div class="project-city">Ramat Gan</div></div>
+                <div class="project-info">
+                    <div class="project-title">Toilettes</div>
+                    <div class="project-city"><i class="fas fa-map-marker-alt"></i> Ramat Gan</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="fade-section" id="testimonials">
-        <h2 class="section-title">Ils nous recommandent</h2>
+    <!-- Testimonials -->
+    <section class="fade-section testimonials-section" id="testimonials">
+        <div class="section-header">
+            <div class="section-tag">Ils nous font confiance</div>
+            <h2 class="section-title">Ils nous recommandent</h2>
+        </div>
         <div class="testimonials-grid">
             <div class="testimonial">
+                <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
                 <div class="testimonial-stars"><span>★★★★★</span></div>
-                <div class="testimonial-text">« Travail parfait et service personnel en français. Notre appartement n'a jamais été aussi beau ! »</div>
-                <div class="testimonial-author">Sarah – Tel-Aviv</div>
+                <div class="testimonial-text">Travail parfait et service personnel en français. Notre appartement n'a jamais été aussi beau !</div>
+                <div class="testimonial-footer">
+                    <div class="testimonial-avatar">S</div>
+                    <div class="testimonial-author">Sarah – Tel-Aviv</div>
+                </div>
             </div>
             <div class="testimonial">
+                <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
                 <div class="testimonial-stars"><span>★★★★★</span></div>
-                <div class="testimonial-text">« Équipe professionnelle et rapide. Cuisine transformée ! »</div>
-                <div class="testimonial-author">David – Netanya</div>
+                <div class="testimonial-text">Équipe professionnelle et rapide. Cuisine entièrement transformée, résultat bluffant !</div>
+                <div class="testimonial-footer">
+                    <div class="testimonial-avatar">D</div>
+                    <div class="testimonial-author">David – Netanya</div>
+                </div>
             </div>
             <div class="testimonial">
+                <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
                 <div class="testimonial-stars"><span>★★★★★</span></div>
-                <div class="testimonial-text">« Je recommande chaleureusement Rénov'Olim. »</div>
-                <div class="testimonial-author">Rachel – Jérusalem</div>
+                <div class="testimonial-text">Je recommande chaleureusement Rénov'Olim pour leur sérieux et leur qualité de travail exceptionnelle.</div>
+                <div class="testimonial-footer">
+                    <div class="testimonial-avatar">R</div>
+                    <div class="testimonial-author">Rachel – Jérusalem</div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Contact -->
     <section class="fade-section" id="contact">
-        <h2 class="section-title">Contactez-nous</h2>
+        <div class="section-header">
+            <div class="section-tag">Démarrer votre projet</div>
+            <h2 class="section-title">Contactez-nous</h2>
+            <p class="section-subtitle">Réponse garantie sous 24h — Devis gratuit et sans engagement</p>
+        </div>
         <div class="contact-container">
             <div class="contact-info">
                 <h3>Parlons de votre projet</h3>
-
+                <p class="contact-intro">Notre équipe est disponible pour répondre à toutes vos questions et établir un devis personnalisé.</p>
                 <div class="info-item">
                     <div class="icon-box"><img src="images/fr_flag.png" alt="FR"></div>
                     <div class="info-text">
@@ -166,7 +305,6 @@
                         <a class="info-link" href="tel:+33652245525">+33 6 52 24 55 25</a>
                     </div>
                 </div>
-
                 <div class="info-item">
                     <div class="icon-box"><img src="images/il_flag.png" alt="IL"></div>
                     <div class="info-text">
@@ -174,7 +312,6 @@
                         <a class="info-link" href="tel:+972546640010">+972 54-664-0010</a>
                     </div>
                 </div>
-
                 <div class="info-item">
                     <div class="icon-box"><span class="icon" style="font-size:24px;">✉️</span></div>
                     <div class="info-text">
@@ -183,82 +320,129 @@
                     </div>
                 </div>
             </div>
-
             <div class="contact-form">
                 <form id="contact-form-fr">
-                    <div class="form-group">
-                        <label>Nom</label>
-                        <input name="name" placeholder="Votre nom" required type="text"
+                    <div class="form-group floating">
+                        <input name="name" placeholder=" " required type="text"
                                oninvalid="this.setCustomValidity('Veuillez remplir ce champ')" oninput="this.setCustomValidity('')" />
+                        <label>Votre nom</label>
                     </div>
-                    <div class="form-group">
-                        <label>Email</label>
-                        <input name="email" placeholder="Votre email" required type="email"
+                    <div class="form-group floating">
+                        <input name="email" placeholder=" " required type="email"
                                oninvalid="this.setCustomValidity('Veuillez entrer une adresse email valide')" oninput="this.setCustomValidity('')" />
+                        <label>Votre email</label>
                     </div>
-                    <div class="form-group">
-                        <label>Téléphone</label>
-                        <input name="phone" placeholder="Votre numéro" required type="tel"
+                    <div class="form-group floating">
+                        <input name="phone" placeholder=" " required type="tel"
                                oninvalid="this.setCustomValidity('Veuillez remplir ce champ')" oninput="this.setCustomValidity('')" />
+                        <label>Votre téléphone</label>
                     </div>
-                    <div class="form-group">
-                        <label>Message</label>
-                        <textarea name="message" placeholder="Votre message..." required
+                    <div class="form-group floating">
+                        <textarea name="message" placeholder=" " required rows="4"
                                   oninvalid="this.setCustomValidity('Veuillez écrire un message')" oninput="this.setCustomValidity('')"></textarea>
+                        <label>Votre message</label>
                     </div>
                     <input type="hidden" name="lang" value="fr" />
                     <input type="hidden" name="token" value="Oren-RenovOlim-2025" />
-                    <button type="submit" id="submit-btn-fr">Envoyer</button>
+                    <button type="submit" id="submit-btn-fr">
+                        <span>Envoyer le message</span> <i class="fas fa-paper-plane"></i>
+                    </button>
                 </form>
                 <div id="contact-status" class="form-status"></div>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="maisondetourer.png" alt="Logo" class="footer-logo-img" />
+                    <span>Rénov'Olim</span>
+                </div>
+                <p>Expert en rénovation en Israël depuis 30 ans. Qualité et savoir-faire pour tous vos projets.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <a href="#home">Accueil</a>
+                <a href="#about">À propos</a>
+                <a href="#services">Services</a>
+                <a href="#projects">Réalisations</a>
+                <a href="#testimonials">Avis</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Nous contacter</h4>
+                <a href="tel:+33652245525"><i class="fas fa-phone"></i> +33 6 52 24 55 25</a>
+                <a href="tel:+972546640010"><i class="fas fa-phone"></i> +972 54-664-0010</a>
+                <a href="mailto:contact.renovolim@gmail.com"><i class="fas fa-envelope"></i> contact.renovolim@gmail.com</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Rénov'Olim. Tous droits réservés.</p>
+            <a href="hebrew.html" class="footer-lang">
+                <img src="images/il_flag.png" alt="IL" /> עברית
+            </a>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" aria-label="Retour en haut" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <script src="script.js"></script>
     <script>
         const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzkqEP6euDkaH6wsKEghU9XCD92eNEWCxJFXm7tHUL_4E7uAsiD_RwzbJ-7Xtijr8LGWQ/exec";
-        document.addEventListener("DOMContentLoaded", function () {
-            const form = document.getElementById("contact-form-fr");
-            const statusEl = document.getElementById("contact-status");
-            const btn = document.getElementById("submit-btn-fr");
 
+        document.addEventListener("DOMContentLoaded", function () {
+            const form    = document.getElementById("contact-form-fr");
+            const statusEl = document.getElementById("contact-status");
+            const btn     = document.getElementById("submit-btn-fr");
             if (!form) return;
+
             form.addEventListener("submit", function (e) {
                 e.preventDefault();
                 const formData = new FormData(form);
-
-                const originalText = btn.innerText;
-                btn.innerText = "Envoi en cours...";
+                const originalHTML = btn.innerHTML;
+                btn.innerHTML = '<span>Envoi en cours…</span> <i class="fas fa-spinner fa-spin"></i>';
                 btn.classList.add("btn-loading");
+                btn.disabled = true;
 
                 fetch(WEB_APP_URL, { method: "POST", body: formData, mode: "no-cors" })
                     .then(() => {
-                        statusEl.textContent = "Merci ! Message envoyé.";
-                        statusEl.style.color = "green";
+                        statusEl.textContent = "✅ Merci ! Votre message a bien été envoyé.";
+                        statusEl.className = "form-status success";
                         form.reset();
                     })
                     .catch(() => {
-                        statusEl.textContent = "Erreur technique.";
-                        statusEl.style.color = "red";
+                        statusEl.textContent = "❌ Erreur technique. Veuillez réessayer.";
+                        statusEl.className = "form-status error";
                     })
                     .finally(() => {
-                        btn.innerText = originalText;
+                        btn.innerHTML = originalHTML;
                         btn.classList.remove("btn-loading");
+                        btn.disabled = false;
                     });
             });
         });
 
         function toggleMenu() {
             document.getElementById('nav-menu').classList.toggle('open');
-            document.querySelector('.hamburger-menu').classList.toggle('toggle');
+            document.getElementById('hamburger').classList.toggle('toggle');
+        }
+
+        function closeMenu() {
+            document.getElementById('nav-menu').classList.remove('open');
+            document.getElementById('hamburger').classList.remove('toggle');
         }
 
         function updateSlider(rangeInput) {
-            const wrapper = rangeInput.closest('.project-img-wrapper');
+            const wrapper   = rangeInput.closest('.project-img-wrapper');
             const beforeImg = wrapper.querySelector('.project-before-img');
-            const handle = wrapper.querySelector('.slider-handle');
-            const val = rangeInput.value;
+            const handle    = wrapper.querySelector('.slider-handle');
+            const val       = rangeInput.value;
             beforeImg.style.clipPath = `polygon(0 0, ${val}% 0, ${val}% 100%, 0 100%)`;
             handle.style.left = `${val}%`;
         }
